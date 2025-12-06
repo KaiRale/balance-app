@@ -67,3 +67,10 @@
   - 404 — пользователь не найден
   - 409 — конфликт (например, недостаточно средств)
 * Транзакция имеет следующие статусы: deposit, withdraw, transfer_in, transfer_out
+
+## Установка и тестирование
+* Приложение разворачивается через docker
+* Необходимо выполнить миграции(php artisan migrate:fresh) и создать тестовые данные (php artisan db:seed)
+* Импортировать в postman файлы ([balanceApp.postman_environment.json](balanceApp.postman_environment.json), 
+[balance-app.postman_collection.json](balance-app.postman_collection.json)). 
+* Протестировать запросы в postman
