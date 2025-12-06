@@ -69,7 +69,7 @@
 * Транзакция имеет следующие статусы: deposit, withdraw, transfer_in, transfer_out
 
 ## Установка и тестирование
-* Приложение разворачивается через docker
+* Приложение разворачивается через docker (необходимо переименовать [.env.testing](.env.testing) в .env)
 * Необходимо выполнить миграции(php artisan migrate:fresh) и создать тестовые данные (php artisan db:seed)
 * Импортировать в postman файлы ([balanceApp.postman_environment.json](balanceApp.postman_environment.json), 
 [balance-app.postman_collection.json](balance-app.postman_collection.json)). 
