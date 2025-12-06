@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "3947d1be-acdb-45e8-bb6c-e3734f5ae923",
+		"name": "balance-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2943475"
+	},
+	"item": [
+		{
+			"name": "balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/balance/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"balance",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deposit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user_id\": 1,\r\n  \"amount\": 1500.00,\r\n  \"comment\": \"Пополнение через карту\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/deposit",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "withdraw",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user_id\": 2,\r\n  \"amount\": 200.00,\r\n  \"comment\": \"Покупка подписки\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/withdraw",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"from_user_id\": 1,\r\n  \"to_user_id\": 2,\r\n  \"amount\": 150.00,\r\n  \"comment\": \"Перевод другу\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/transfer",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{api_key}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "X-API-KEY",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
